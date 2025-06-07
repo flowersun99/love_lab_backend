@@ -1,0 +1,4 @@
+Flask
+flask-cors
+yagmail
+python-dotenv
