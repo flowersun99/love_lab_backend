@@ -22,6 +22,10 @@ def is_valid_email(email):
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(pattern, email) is not None
 
+@app.route('/')
+def index():
+    return jsonify({'success': True, 'msg': 'Hello, World!'})
+
 @app.route('/send', methods=['POST'])
 def send_mail():
     data = request.json
